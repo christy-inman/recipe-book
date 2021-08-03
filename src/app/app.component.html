@@ -1,7 +1,7 @@
 <main *ngIf="activeSession$ | async; else newSession">
   Coming Soon to a browser near you!
-  <!-- <mat-tab *ngIf="allRecipesGET; else loading">
-    <home>
+  <div mat-tab *ngIf="allRecipes$ | asyc; else loading">
+    <!-- <home>
       <card-container?>
         <card ngFor>
 
@@ -12,11 +12,11 @@
       <create-form>
 
       </create-form>
-    </create>
-  </mat-tab>
-  <div>
-    Loading Wheel
-  </div> -->
+    </create> -->
+  </div>
+  <ng-template #loading>
+    <app-loading></app-loading>
+  </ng-template>
 </main>  
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LandingService } from '../landing.service';
+import { LandingService } from './landing.service';
 
 @Component({
   selector: 'app-landing-page',

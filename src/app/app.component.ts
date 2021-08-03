@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LandingService } from './landing.service';
+import { LandingService } from './landing-page/landing.service';
 
 
 @Component({
