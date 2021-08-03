@@ -1,4 +1,4 @@
-<main *ngIf="activeSession; else newSession">
+<main *ngIf="activeSession$ | async; else newSession">
   Coming Soon to a browser near you!
   <!-- <mat-tab *ngIf="allRecipesGET; else loading">
     <home>

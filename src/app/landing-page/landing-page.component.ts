@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LandingService } from '../landing.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,15 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private landingService: LandingService) { }
 
   ngOnInit(): void {
-    // clear browser storage
+    
+  }
+
+  getStarted() {
     this.setSession();
+    // GET all recipes
+    // publish to observable, watch for it in the home page component for loading screen
   }
 
   private setSession() {
     // publish to observable, watch it for session check in app.html
+    this.landingService.updateSession(true)
+    
     // set browser session storage
   }
 

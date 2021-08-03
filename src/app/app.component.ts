@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { Observable } from 'rxjs';
+import { LandingService } from './landing.service';
 
 
 @Component({
@@ -9,6 +10,11 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 })
 export class AppComponent {
   title = 'Recipe Book';
+  
+	public readonly activeSession$: Observable<boolean> = this.landingService.activeSession$;
 
-  activeSession:boolean = false
+  constructor (
+		private landingService: LandingService
+	      ) {}
+
 }
