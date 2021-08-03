@@ -1,6 +1,7 @@
 <main *ngIf="activeSession$ | async; else newSession">
-  Coming Soon to a browser near you!
-  <div mat-tab *ngIf="allRecipes$ | asyc; else loading">
+  
+  <div mat-tab *ngIf="allRecipes$ | async; else loading">
+    Coming Soon to a browser near you!
     <!-- <home>
       <card-container?>
         <card ngFor>
