@@ -18,6 +18,7 @@ export class LandingPageComponent implements OnInit {
   getStarted() {
     this.setSession();
     // GET all recipes
+    
     // publish to observable, watch for it in the home page component for loading screen
   }
 
