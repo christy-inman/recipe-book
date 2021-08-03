@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from '../recipes/recipe.service';
 import { LandingService } from './landing.service';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -9,7 +11,7 @@ import { LandingService } from './landing.service';
 export class LandingPageComponent implements OnInit {
 
 
-  constructor(private landingService: LandingService) { }
+  constructor(private landingService: LandingService, private recipeService: RecipeService) { }
 
   ngOnInit(): void {
     
@@ -18,8 +20,7 @@ export class LandingPageComponent implements OnInit {
   getStarted() {
     this.setSession();
     // GET all recipes
-    
-    // publish to observable, watch for it in the home page component for loading screen
+    this.recipeService.getAllRecipes();
   }
 
   private setSession() {
