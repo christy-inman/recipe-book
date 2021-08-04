@@ -12,6 +12,7 @@ import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { RecipeContainerComponent } from './recipe-container/recipe-container.component';
 import {MatCardModule} from '@angular/material/card';
+import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatCardModule} from '@angular/material/card';
     LandingPageComponent,
     LoadingComponent,
     RecipeBookComponent,
-    RecipeContainerComponent
+    RecipeContainerComponent,
+    RecipeCardComponent
   ],
   imports: [
     BrowserModule,
