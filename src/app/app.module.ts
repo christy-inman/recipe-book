@@ -10,13 +10,16 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoadingComponent } from './loading/loading.component';
 import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { RecipeContainerComponent } from './recipe-container/recipe-container.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     LoadingComponent,
-    RecipeBookComponent
+    RecipeBookComponent,
+    RecipeContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

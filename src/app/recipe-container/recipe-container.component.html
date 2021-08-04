@@ -1,0 +1,16 @@
+<main>
+    <ng-container *ngFor="let recipe of allRecipes$ | async">
+        <mat-card >
+            <img mat-card-image src="{{recipe.coverImageUrl}}">
+            <mat-card-title>{{recipe.title}}</mat-card-title>
+            <mat-card-content>
+                <p>{{recipe.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary">View</button>
+                <button mat-raised-button color="primary">Edit</button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+    
+</main>
