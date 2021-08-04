@@ -1,20 +1,5 @@
 <main *ngIf="activeSession$ | async; else newSession">
-  
-  <div mat-tab *ngIf="allRecipes$ | async; else loading">
-    Coming Soon to a browser near you!
-    <!-- <home>
-      <card-container?>
-        <card ngFor>
-
-        </card>
-      </card-container>
-    </home>
-    <create>
-      <create-form>
-
-      </create-form>
-    </create> -->
-  </div>
+  <app-recipe-book mat-tab *ngIf="allRecipes$ | async; else loading"></app-recipe-book>
   <ng-template #loading>
     <app-loading></app-loading>
   </ng-template>
