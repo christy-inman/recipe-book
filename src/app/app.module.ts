@@ -13,6 +13,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { RecipeContainerComponent } from './recipe-container/recipe-container.component';
 import {MatCardModule} from '@angular/material/card';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RecipeCardComponent } from './recipe-card/recipe-card.component';
     LoadingComponent,
     RecipeBookComponent,
     RecipeContainerComponent,
-    RecipeCardComponent
+    RecipeCardComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

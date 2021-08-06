@@ -1,9 +1,9 @@
-<main *ngIf="activeSession$ | async; else newSession">
+<div *ngIf="activeSession$ | async; else newSession">
   <app-recipe-book mat-tab *ngIf="allRecipes$ | async; else loading"></app-recipe-book>
   <ng-template #loading>
     <app-loading></app-loading>
   </ng-template>
-</main>  
+</div>  
 
 
 <ng-template #newSession>
